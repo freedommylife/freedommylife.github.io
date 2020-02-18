@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nd0ppc.coding-pages.com</id>
     <title>玩嗨了的小男孩</title>
-    <updated>2020-02-18T01:29:19.534Z</updated>
+    <updated>2020-02-18T11:38:41.203Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://nd0ppc.coding-pages.com"/>
     <link rel="self" href="https://nd0ppc.coding-pages.com/atom.xml"/>
@@ -11,22 +11,20 @@
     <icon>https://nd0ppc.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 玩嗨了的小男孩</rights>
     <entry>
-        <title type="html"><![CDATA[谤法]]></title>
-        <id>https://nd0ppc.coding-pages.com/post/zTqaJBKk0/</id>
-        <link href="https://nd0ppc.coding-pages.com/post/zTqaJBKk0/">
+        <title type="html"><![CDATA[这是一篇test]]></title>
+        <id>https://nd0ppc.coding-pages.com/post/J8uIpU7Hf/</id>
+        <link href="https://nd0ppc.coding-pages.com/post/J8uIpU7Hf/">
         </link>
-        <updated>2020-02-18T01:27:32.000Z</updated>
-        <content type="html"><![CDATA[<p>刚看开头，感觉会是又一部非常不错的韩剧～🤣</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[这是一篇测试文章]]></title>
-        <id>https://nd0ppc.coding-pages.com/post/zhe-shi-yi-pian-ce-shi-wen-zhang/</id>
-        <link href="https://nd0ppc.coding-pages.com/post/zhe-shi-yi-pian-ce-shi-wen-zhang/">
-        </link>
-        <updated>2020-02-18T00:48:40.000Z</updated>
-        <content type="html"><![CDATA[<p>今天吃点什么好呢？！<br>
-😂😂😂😂😂😂</p>
+        <updated>2020-02-18T11:34:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>这是一篇test<br>
+kasdjkasdaskdkas</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这是一篇test<br>
+kasdjkasdaskdkas</p>
+<!-- more -->
+<p>的开发建设的看法就是看到飞机上岛咖啡就开始打飞机<br>
+😂🤣😊😇🙂😉😜😝😛<br>
+<img src="https://i.loli.net/2020/02/18/JDn2fjUTq8LsFtr.jpg" alt="p2585598759.jpg" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
