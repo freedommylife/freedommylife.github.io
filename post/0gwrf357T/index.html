@@ -4,7 +4,7 @@
 <meta name="referrer" content="never">
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>玩嗨了的小男孩</title>
+<title>111 | 玩嗨了的小男孩</title>
 <link rel="shortcut icon" href="https://freedommylife.github.io/favicon.ico?v=1582131090209">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://freedommylife.github.io/styles/main.css">
@@ -30,11 +30,11 @@
 <script src="media/scripts/index.js"></script>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -83,63 +83,62 @@
         </div>
     </div>
 </nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    111
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-02-20 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p><a href="https://book.douban.com/subject/33408247/">https://book.douban.com/subject/33408247/</a><br>
+<a href="https://movie.douban.com/subject/10432911/">https://movie.douban.com/subject/10432911/</a></p>
+
+                </div>
+            </article>
+        </div>
 
         
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://freedommylife.github.io/post/J8uIpU7Hf/" class="post-title gt-a-link">
+                    这是一篇test
+                </a>
+            </div>
+        
 
-<div class="archives-container">
-    
-        <h2 class="year gt-c-cotent-color-first">2020</h2>
         
             
-                <article class="post">
-                    <a href="https://freedommylife.github.io/post/0gwrf357T/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-02-20&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            111
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://freedommylife.github.io/post/J8uIpU7Hf/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-02-18&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            这是一篇test
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-        
-    
-        <h2 class="year gt-c-cotent-color-first">2018</h2>
-        
-            
-        
-            
-        
-            
-                <article class="post">
-                    <a href="https://freedommylife.github.io/post/hello-gridea/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2018-12-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Hello Gridea
-                        </div>
-                    </a>
-                </article>
-            
-        
-    
-</div>
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        <div class="pagination-container">
-    
-    
-</div>
+<div id="gitalk-container"></div>
 
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'db56184acf3e0e093d4b',
+    clientSecret: 'c5ce2a402bc092e933b1233126318a99d29ba260',
+    repo: 'freedommylife.github.io',
+    owner: 'freedommylife',
+    admin: ['freedommylife'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">冲啊！<meta name="referrer" content="never"></div>
@@ -204,7 +203,48 @@ jQuery(document).ready(function ($) {
     hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
 </div>
 </body>
 </html>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $("a[href*='douban']").each(function () {
+            var _this = $(this);
+            var str = _this.attr("href");
+            var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+            if (db_reg.test(str)) {
+                var db_type = str.replace(db_reg, "$1");
+                var db_id = str.replace(db_reg, "$2").toString();
+                var db_api = "https://bm.weajs.com/api/";
+                if (db_type == 'movie') {
+                    var url = db_api + "movies/" + db_id + "/";
+                    $.ajax({
+                        url: url,
+                        type: 'GET',
+                        dataType: "json",
+                        success: function (data) {
+                            var db_star = Math.ceil(data.rating);
+                            $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                        }
+                    });
+                } else if (db_type == 'book') {
+                    var url = db_api + "books/" + db_id;
+                    $.ajax({
+                        url: url,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            var db_star = Math.ceil(data.rating);
+                            $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+                        }
+                    });
+                } else {
+                    console.log("出错" + id)
+                }
+            }
+        });
+    });
+</script>
