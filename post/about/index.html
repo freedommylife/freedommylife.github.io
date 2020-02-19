@@ -2,9 +2,10 @@
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
+<meta name="referrer" content="never">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>关于 | 玩嗨了的小男孩</title>
-<link rel="shortcut icon" href="https://freedommylife.github.io/favicon.ico?v=1582116077372">
+<link rel="shortcut icon" href="https://freedommylife.github.io/favicon.ico?v=1582124231691">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://freedommylife.github.io/styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -15,6 +16,7 @@
 <script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -24,10 +26,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+       
 <!-- DEMO JS -->
 <script src="media/scripts/index.js"></script>
-
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -168,8 +169,8 @@
 </div>
 </body>
 </html>
-<script type="text/javascript">
-jQuery(document).ready(function ($) {
+<script>
+  jQuery(document).ready(function ($) {
     $("a[href*='douban']").each(function () {
       var _this = $(this);
       var str = _this.attr("href");
@@ -186,7 +187,28 @@ jQuery(document).ready(function ($) {
             dataType: "json",
             success: function (data) {
               var db_star = Math.ceil(data.rating);
-              $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+              $("
+                
+                <div class='post-preview'>
+                  <div class='post-preview--meta'>
+                  <div class='post-preview--middle'>
+                    <h4 class='post-preview--title'>
+                      <a target='_blank' href='" + str + "'>
+                        《" + data.title + "》
+                      </a>
+                    </h4>
+                    <div class='rating'>
+                      <div class='rating-star allstar" + db_star + "'></div>
+                      <div class='rating-average'>" + data.rating + "</div>
+                    </div>
+                    <time class='post-preview--date'>导演：" + data.directors + " / 类型：" + data.genres + " / " + data.pubdate + "</time>
+                    <section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section>
+                  </div>
+                  </div>
+                  <img class='post-preview--image' src=" + data.cover + ">
+                </div>
+              
+              ").replaceAll(_this)
             }
           });
         } else if (db_type == 'book') {
@@ -197,7 +219,28 @@ jQuery(document).ready(function ($) {
             dataType: 'json',
             success: function (data) {
               var db_star = Math.ceil(data.rating);
-              $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" + str + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>作者：" + data.author + " </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section></div></div><img class='post-preview--image' src=" + data.cover + "></div>").replaceAll(_this)
+              $("
+              
+                <div class='post-preview'>
+                  <div class='post-preview--meta'>
+                  <div class='post-preview--middle'>
+                    <h4 class='post-preview--title'>
+                      <a target='_blank' href='" + str + "'>
+                        《" + data.title + "》
+                      </a>
+                    </h4>
+                    <div class='rating'>
+                      <div class='rating-star allstar" + db_star + "'></div>
+                      <div class='rating-average'>" + data.rating + "</div>
+                    </div>
+                    <time class='post-preview--date'>作者：" + data.author + " </time>
+                    <section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro + "</section>
+                  </div>
+                  </div>
+                  <img class='post-preview--image' src=" + data.cover + ">
+                </div>
+              
+              ").replaceAll(_this)
             }
           });
         } else {
