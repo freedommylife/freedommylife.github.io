@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://freedommylife.github.io</id>
-    <title>LilPlayBoy</title>
-    <updated>2020-02-19T19:48:18.468Z</updated>
+    <title>玩嗨了的小男孩</title>
+    <updated>2020-02-21T07:30:06.321Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://freedommylife.github.io"/>
     <link rel="self" href="https://freedommylife.github.io/atom.xml"/>
     <subtitle>冲啊！</subtitle>
     <logo>https://freedommylife.github.io/images/avatar.png</logo>
     <icon>https://freedommylife.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, LilPlayBoy</rights>
+    <rights>All rights reserved 2020, 玩嗨了的小男孩</rights>
 </feed>
