@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://freedommylife.github.io</id>
     <title>玩嗨了的小男孩</title>
-    <updated>2020-02-21T07:56:27.951Z</updated>
+    <updated>2021-03-02T10:15:30.650Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://freedommylife.github.io"/>
     <link rel="self" href="https://freedommylife.github.io/atom.xml"/>
     <subtitle>冲啊！</subtitle>
     <logo>https://freedommylife.github.io/images/avatar.png</logo>
     <icon>https://freedommylife.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 玩嗨了的小男孩</rights>
+    <rights>All rights reserved 2021, 玩嗨了的小男孩</rights>
+    <entry>
+        <title type="html"><![CDATA[今天太阳很大]]></title>
+        <id>https://freedommylife.github.io/post/R-27A1w-8/</id>
+        <link href="https://freedommylife.github.io/post/R-27A1w-8/">
+        </link>
+        <updated>2021-03-02T09:26:40.000Z</updated>
+        <content type="html"><![CDATA[<p>个人意志集体利益<br>
+生来平等生而不同<br>
+造神弑神成仁成魔<br>
+自定经由世本无路<br>
+经验教训老人常言<br>
+吃亏是福祸福相倚<br>
+王婆卖瓜自圆其说<br>
+Time</p>
+]]></content>
+    </entry>
 </feed>
